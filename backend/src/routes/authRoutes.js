@@ -24,8 +24,8 @@ const router = express.Router();
 // Register a new user
 router.post(
   '/register',
-  authLimiter,
-  validateRegister,
+  // authLimiter,
+  // validateRegister,
   handleValidationErrors,
   authController.registerController
 );

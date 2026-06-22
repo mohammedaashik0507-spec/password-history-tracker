@@ -9,9 +9,9 @@ import cors from 'cors';
 import 'dotenv/config';
 
 // Import configuration
-import { config } from './src/config/config.js';
-import { connectDB } from './src/config/database.js';
-import { CONSTANTS } from './src/config/constants.js';
+import { config } from './config/config.js';
+import { connectDB } from './config/database.js';
+import { CONSTANTS } from './config/constants.js';
 
 // Import middleware
 import {
@@ -19,16 +19,16 @@ import {
   corsOptions,
   helmetOptions,
   requestLogger,
-} from './src/middleware/security.js';
+} from './middleware/security.js';
 import {
   errorHandler,
   notFoundHandler,
-} from './src/middleware/errorHandler.js';
+} from './middleware/errorHandler.js';
 
 // Import routes
-import healthRoutes from './src/routes/healthRoutes.js';
-import authRoutes from './src/routes/authRoutes.js';
-import adminRoutes from './src/routes/adminRoutes.js';
+import healthRoutes from './routes/healthRoutes.js';
+import authRoutes from './routes/authRoutes.js';
+import adminRoutes from './routes/adminRoutes.js';
 
 // Create Express app
 const app = express();
